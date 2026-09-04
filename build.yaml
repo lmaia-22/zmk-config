@@ -30,5 +30,5 @@ include:
     artifact-name: settings_reset
   - board: nice_nano
     shield: corne_right
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
     artifact-name: corne_right_debug_log
