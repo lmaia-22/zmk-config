@@ -28,12 +28,3 @@ include:
   - board: nice_nano
     shield: settings_reset
     artifact-name: settings_reset
-  # Debug-only: right half built as central so CONFIG_ZMK_USB is available
-  # (it is force-disabled for split peripherals, and without it the app never
-  # enumerates USB, so no log can be read). Display init is role-independent,
-  # so this still reproduces the OLED problem. Not for normal use.
-  - board: nice_nano
-    shield: corne_right
-    snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    artifact-name: corne_right_debug_log
